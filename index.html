@@ -39,6 +39,7 @@
         "addressLocality": "Port Vila",
         "addressCountry": "VU"
       },
+      "hasMap": "https://share.google/ra4N4P1g391WOpx0L",
       "url": "https://www.facebook.com/profile.php?id=61589945336943",
       "openingHoursSpecification": [
         {
@@ -71,11 +72,19 @@
         <span class="logo-accent">THE</span> GROOMING ROOM
       </div>
       <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#services" data-translate="nav_services">Services</a>
+        <a href="#about" data-translate="nav_about">About</a>
+        <a href="#contact" data-translate="nav_contact">Contact</a>
       </nav>
-      <button class="cta-button" onclick="openBookingModal()">Book Appointment</button>
+      
+      <!-- Language Switcher -->
+      <div class="lang-switch-container">
+        <button id="lang-toggle-en" class="lang-btn active" onclick="setLanguage('en')">EN</button>
+        <span class="lang-divider">/</span>
+        <button id="lang-toggle-bi" class="lang-btn" onclick="setLanguage('bi')">BI</button>
+      </div>
+
+      <button class="cta-button" onclick="openBookingModal()" data-translate="nav_book">Book Appointment</button>
     </div>
   </header>
 
@@ -84,11 +93,11 @@
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1 class="hero-title">Fresh Styles, <br><span class="highlight">Friendly Service</span></h1>
-        <p class="hero-subtitle">Your friendly local barber shop and beauty salon in Port Vila. Great cuts, fresh styles, and reliable care for the whole family.</p>
+        <h1 class="hero-title" data-translate="hero_title">Fresh Styles, <br><span class="highlight">Friendly Service</span></h1>
+        <p class="hero-subtitle" data-translate="hero_subtitle">Your friendly local barber shop and beauty salon in Port Vila. Great cuts, fresh styles, and reliable care for the whole family.</p>
         <div class="hero-actions">
-          <button class="cta-button pulse" onclick="openBookingModal()">Book Now via WhatsApp</button>
-          <a href="#services" class="secondary-button">Explore Services</a>
+          <button class="cta-button pulse" onclick="openBookingModal()" data-translate="hero_cta">Book Now via WhatsApp</button>
+          <a href="#services" class="secondary-button" data-translate="hero_explore">Explore Services</a>
         </div>
       </div>
     </section>
@@ -96,8 +105,8 @@
     <!-- Services Section -->
     <section id="services" class="services-section">
       <div class="container">
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-subtitle">Comfortable, quality care designed to keep you looking and feeling your best.</p>
+        <h2 class="section-title" data-translate="services_title">Our Services</h2>
+        <p class="section-subtitle" data-translate="services_subtitle">Comfortable, quality care designed to keep you looking and feeling your best.</p>
         
         <div class="services-grid">
           <!-- Service 1: Hair Care -->
@@ -107,11 +116,11 @@
               <span class="card-badge">01</span>
             </div>
             <div class="card-content">
-              <h3>Hair Care & Styling</h3>
-              <p>Cut, style, wash & professional finish tailored to your unique look.</p>
+              <h3 data-translate="service1_title">Hair Care & Styling</h3>
+              <p data-translate="service1_desc">Cut, style, wash & professional finish tailored to your unique look.</p>
               <div class="card-footer">
-                <span class="price-hint">Starting from VT 1,500</span>
-                <button class="card-action-btn" onclick="openBookingModal('Hair Care & Styling')">Book Service</button>
+                <span class="price-hint" data-translate="price_hair">Starting from VT 1,500</span>
+                <button class="card-action-btn" onclick="openBookingModal('Hair Care & Styling')" data-translate="btn_book">Book Service</button>
               </div>
             </div>
           </div>
@@ -123,11 +132,11 @@
               <span class="card-badge">02</span>
             </div>
             <div class="card-content">
-              <h3>Skincare & Esthetics</h3>
-              <p>Facial treatments, deep cleansing, and skin glow care for radiant vitality.</p>
+              <h3 data-translate="service2_title">Skincare & Esthetics</h3>
+              <p data-translate="service2_desc">Facial treatments, deep cleansing, and skin glow care for radiant vitality.</p>
               <div class="card-footer">
-                <span class="price-hint">Starting from VT 2,500</span>
-                <button class="card-action-btn" onclick="openBookingModal('Skincare & Esthetics')">Book Service</button>
+                <span class="price-hint" data-translate="price_skin">Starting from VT 2,500</span>
+                <button class="card-action-btn" onclick="openBookingModal('Skincare & Esthetics')" data-translate="btn_book">Book Service</button>
               </div>
             </div>
           </div>
@@ -139,11 +148,11 @@
               <span class="card-badge">03</span>
             </div>
             <div class="card-content">
-              <h3>Nail Services</h3>
-              <p>Expert manicure, pedicure, cuticle therapy, and creative nail care.</p>
+              <h3 data-translate="service3_title">Nail Services</h3>
+              <p data-translate="service3_desc">Expert manicure, pedicure, cuticle therapy, and creative nail care.</p>
               <div class="card-footer">
-                <span class="price-hint">Starting from VT 1,800</span>
-                <button class="card-action-btn" onclick="openBookingModal('Nail Services')">Book Service</button>
+                <span class="price-hint" data-translate="price_nails">Starting from VT 1,800</span>
+                <button class="card-action-btn" onclick="openBookingModal('Nail Services')" data-translate="btn_book">Book Service</button>
               </div>
             </div>
           </div>
@@ -155,11 +164,11 @@
               <span class="card-badge">04</span>
             </div>
             <div class="card-content">
-              <h3>Makeup & Waxing</h3>
-              <p>Flawless makeup application for any occasion and silky-smooth professional waxing.</p>
+              <h3 data-translate="service4_title">Makeup & Waxing</h3>
+              <p data-translate="service4_desc">Flawless makeup application for any occasion and silky-smooth professional waxing.</p>
               <div class="card-footer">
-                <span class="price-hint">Starting from VT 2,000</span>
-                <button class="card-action-btn" onclick="openBookingModal('Makeup & Waxing')">Book Service</button>
+                <span class="price-hint" data-translate="price_makeup">Starting from VT 2,000</span>
+                <button class="card-action-btn" onclick="openBookingModal('Makeup & Waxing')" data-translate="btn_book">Book Service</button>
               </div>
             </div>
           </div>
@@ -171,11 +180,11 @@
               <span class="card-badge">05</span>
             </div>
             <div class="card-content">
-              <h3>Men's Grooming</h3>
-              <p>Precision beard trim, traditional hot towel shave, and complete grooming care.</p>
+              <h3 data-translate="service5_title">Men's Grooming</h3>
+              <p data-translate="service5_desc">Precision beard trim, traditional hot towel shave, and complete grooming care.</p>
               <div class="card-footer">
-                <span class="price-hint">Starting from VT 1,200</span>
-                <button class="card-action-btn" onclick="openBookingModal('Men\'s Grooming')">Book Service</button>
+                <span class="price-hint" data-translate="price_grooming">Starting from VT 1,200</span>
+                <button class="card-action-btn" onclick="openBookingModal('Men\'s Grooming')" data-translate="btn_book">Book Service</button>
               </div>
             </div>
           </div>
@@ -187,24 +196,24 @@
     <section id="about" class="about-section">
       <div class="container grid-2">
         <div class="about-text">
-          <span class="accent-text">WELCOME TO THE GROOMING ROOM</span>
-          <h2>Quality Cuts & Cozy Vibe</h2>
-          <p>At The Grooming Room, we believe that looking good shouldn't be complicated or expensive. We offer a friendly, comfortable atmosphere where you can get a great cut, refreshing skincare, or custom nails at sensible prices.</p>
-          <p>Whether you're visiting for a regular trim, a soothing facial, a manicure, or makeup for an event, our experienced team is here to take care of you with friendly service and quality care.</p>
+          <span class="accent-text" data-translate="about_accent">WELCOME TO THE GROOMING ROOM</span>
+          <h2 data-translate="about_title">Quality Cuts & Cozy Vibe</h2>
+          <p data-translate="about_desc1">At The Grooming Room, we believe that looking good shouldn't be complicated or expensive. We offer a friendly, comfortable atmosphere where you can get a great cut, refreshing skincare, or custom nails at sensible prices.</p>
+          <p data-translate="about_desc2">Whether you're visiting for a regular trim, a soothing facial, a manicure, or makeup for an event, our experienced team is here to take care of you with friendly service and quality care.</p>
           
           <div class="features-list">
             <div class="feature-item">
               <div class="feature-icon">✨</div>
               <div>
-                <h4>Experienced Team</h4>
-                <p>Talented staff with years of experience.</p>
+                <h4 data-translate="feat1_title">Experienced Team</h4>
+                <p data-translate="feat1_desc">Talented staff with years of experience.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">🏠</div>
               <div>
-                <h4>Comfortable Shop</h4>
-                <p>A warm, clean, and welcoming environment for everyone.</p>
+                <h4 data-translate="feat2_title">Comfortable Shop</h4>
+                <p data-translate="feat2_desc">A warm, clean, and welcoming environment for everyone.</p>
               </div>
             </div>
           </div>
@@ -218,8 +227,8 @@
     <!-- Contact & Social Section -->
     <section id="contact" class="contact-section">
       <div class="container">
-        <h2 class="section-title">Connect with Us</h2>
-        <p class="section-subtitle">Reach out directly to book your slot, ask questions, or check out our latest styles online.</p>
+        <h2 class="section-title" data-translate="contact_title">Connect with Us</h2>
+        <p class="section-subtitle" data-translate="contact_subtitle">Reach out directly to book your slot, ask questions, or check out our latest styles online.</p>
         
         <div class="contact-grid">
           <!-- Card 1: WhatsApp (Primary Action) -->
@@ -230,9 +239,9 @@
                 <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.982L2 22l5.233-1.371a9.936 9.936 0 0 0 4.779 1.22h.004c5.505 0 9.989-4.478 9.989-9.984 0-2.669-1.037-5.176-2.922-7.062C17.199 3.036 14.693 2 12.012 2zm5.726 14.156c-.253.714-1.265 1.304-1.74 1.353-.473.049-.938.232-3.034-.593-2.522-.993-4.148-3.565-4.274-3.731-.125-.167-1.025-1.365-1.025-2.604 0-1.24.646-1.85.877-2.097.23-.247.502-.31.669-.31.167 0 .334.002.48.009.155.007.364-.059.57.442.213.518.729 1.776.792 1.902.062.125.104.272.021.439-.083.167-.167.272-.25.376-.084.105-.177.22-.253.298-.092.094-.188.196-.081.38.107.183.475.783.992 1.244.667.595 1.229.779 1.403.865.174.086.275.07.378-.05.102-.119.444-.517.563-.695.119-.177.238-.148.402-.088.163.06.1 .475 2.115 1.479.167.083.277.123.338.223.061.101.061.583-.192 1.298z"/>
               </svg>
             </div>
-            <h3>WhatsApp Bookings</h3>
+            <h3 data-translate="card1_title">WhatsApp Bookings</h3>
             <p class="contact-val">+678 7345132</p>
-            <span class="contact-badge">Fast Response</span>
+            <span class="contact-badge" data-translate="card1_badge">Fast Response</span>
           </a>
 
           <!-- Card 2: Facebook -->
@@ -242,9 +251,9 @@
                 <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
               </svg>
             </div>
-            <h3>Facebook Page</h3>
+            <h3 data-translate="card2_title">Facebook Page</h3>
             <p class="contact-val">The Grooming Room</p>
-            <span class="contact-badge">Portfolio & Reviews</span>
+            <span class="contact-badge" data-translate="card2_badge">Portfolio & Reviews</span>
           </a>
 
           <!-- Card 3: TikTok -->
@@ -254,9 +263,9 @@
                 <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.63 4.14 1.09 1.2 2.61 1.93 4.23 2.1-.01 1.42-.02 2.83-.02 4.25-.97-.03-1.94-.28-2.83-.69-.87-.41-1.64-1.02-2.22-1.79v5.99c0 1.98-.6 3.92-1.74 5.51-1.39 1.93-3.64 3.19-6.05 3.39-2.31.19-4.67-.47-6.52-1.89-1.99-1.53-3.23-3.9-3.29-6.42-.09-2.61 1.11-5.17 3.12-6.84 1.83-1.52 4.25-2.22 6.64-1.9.01 1.44.02 2.88.02 4.31-.83-.17-1.71-.06-2.48.33-.78.4-1.41 1.06-1.77 1.88-.41.95-.42 2.04-.04 3 .36.93 1.08 1.69 1.98 2.09.83.37 1.77.41 2.63.13.91-.29 1.7-1.02 2.05-1.92.2-.53.26-1.1.25-1.66V0h.01z"/>
               </svg>
             </div>
-            <h3>TikTok Trends</h3>
+            <h3 data-translate="card3_title">TikTok Trends</h3>
             <p class="contact-val">@prabhufeum2</p>
-            <span class="contact-badge">Latest Videos</span>
+            <span class="contact-badge" data-translate="card3_badge">Latest Videos</span>
           </a>
 
           <!-- Card 4: Email -->
@@ -266,9 +275,21 @@
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
               </svg>
             </div>
-            <h3>Email Inquiry</h3>
+            <h3 data-translate="card4_title">Email Inquiry</h3>
             <p class="contact-val">thegroomingroom211@gmail.com</p>
-            <span class="contact-badge">General Questions</span>
+            <span class="contact-badge" data-translate="card4_badge">General Questions</span>
+          </a>
+
+          <!-- Card 5: Map Location -->
+          <a href="https://share.google/ra4N4P1g391WOpx0L" target="_blank" class="contact-card map-card">
+            <div class="contact-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <h3 data-translate="card5_title">Our Location</h3>
+            <p class="contact-val">Port Vila, Vanuatu</p>
+            <span class="contact-badge" data-translate="card5_badge">Open Google Maps</span>
           </a>
         </div>
       </div>
@@ -279,39 +300,39 @@
   <dialog id="booking-modal" class="booking-dialog">
     <div class="dialog-content">
       <button class="close-dialog-btn" onclick="closeBookingModal()">&times;</button>
-      <h3>Book Your Session</h3>
-      <p class="dialog-desc">Fill out the quick details below. It will generate a customized booking template and direct you to WhatsApp to confirm with us!</p>
+      <h3 data-translate="modal_title">Book Your Session</h3>
+      <p class="dialog-desc" data-translate="modal_desc">Fill out the quick details below. It will generate a customized booking template and direct you to WhatsApp to confirm with us!</p>
       
       <form id="booking-form" onsubmit="handleBookingSubmit(event)">
         <div class="form-group">
-          <label for="booking-name">Your Name</label>
+          <label for="booking-name" data-translate="label_name">Your Name</label>
           <input type="text" id="booking-name" required placeholder="Enter your full name">
         </div>
         
         <div class="form-group">
-          <label for="booking-service">Choose Service</label>
+          <label for="booking-service" data-translate="label_service">Choose Service</label>
           <select id="booking-service" required>
-            <option value="" disabled selected>Select a service</option>
-            <option value="Hair Care & Styling">01. Hair Care & Styling</option>
-            <option value="Skincare & Esthetics">02. Skincare & Esthetics</option>
-            <option value="Nail Services">03. Nail Services</option>
-            <option value="Makeup & Waxing">04. Makeup & Waxing</option>
-            <option value="Men's Grooming">05. Men's Grooming</option>
+            <option value="" disabled selected data-translate="opt_select">Select a service</option>
+            <option value="Hair Care & Styling" data-translate="opt_hair">01. Hair Care & Styling</option>
+            <option value="Skincare & Esthetics" data-translate="opt_skin">02. Skincare & Esthetics</option>
+            <option value="Nail Services" data-translate="opt_nails">03. Nail Services</option>
+            <option value="Makeup & Waxing" data-translate="opt_makeup">04. Makeup & Waxing</option>
+            <option value="Men's Grooming" data-translate="opt_grooming">05. Men's Grooming</option>
           </select>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="booking-date">Preferred Date</label>
+            <label for="booking-date" data-translate="label_date">Preferred Date</label>
             <input type="date" id="booking-date" required>
           </div>
           <div class="form-group">
-            <label for="booking-time">Preferred Time</label>
+            <label for="booking-time" data-translate="label_time">Preferred Time</label>
             <input type="time" id="booking-time" required>
           </div>
         </div>
         
-        <button type="submit" class="submit-booking-btn">Proceed to WhatsApp Booking</button>
+        <button type="submit" class="submit-booking-btn" data-translate="btn_submit">Proceed to WhatsApp Booking</button>
       </form>
     </div>
   </dialog>
@@ -321,7 +342,7 @@
     <div class="container footer-content">
       <p>&copy; 2026 The Grooming Room - Barber Shop & Beauty Salon. All rights reserved.</p>
       <div class="footer-meta">
-        <span>Port Vila, Vanuatu</span> | <span>+678 7345132</span>
+        <a href="https://share.google/ra4N4P1g391WOpx0L" target="_blank" class="footer-link">Port Vila, Vanuatu</a> | <a href="tel:+6787345132" class="footer-link">+678 7345132</a>
       </div>
     </div>
   </footer>

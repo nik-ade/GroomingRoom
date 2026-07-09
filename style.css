@@ -608,6 +608,23 @@ h1, h2, h3, h4 {
   border-color: var(--accent-primary);
 }
 
+/* Map / Location */
+.map-card:hover {
+  border-color: var(--accent-primary);
+}
+.map-card:hover .contact-icon-box {
+  background: rgba(211, 97, 53, 0.08);
+}
+.map-card:hover .contact-icon-box svg {
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+.map-card:hover .contact-badge {
+  background: rgba(211, 97, 53, 0.08);
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
 /* Dialog / Modal Styling */
 .booking-dialog {
   border: 1px solid var(--border-color);
@@ -758,6 +775,55 @@ input:focus, select:focus {
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+
+.footer-link {
+  color: var(--accent-timber-dark);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+  color: var(--accent-primary);
+  text-decoration: underline;
+}
+
+/* Language Switcher Styling */
+.lang-switch-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-left: 1rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.1rem 0.4rem;
+  transition: var(--transition-smooth);
+}
+
+.lang-btn.active {
+  color: var(--accent-primary);
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--text-main);
+}
+
+.lang-divider {
+  color: var(--border-color);
+  font-size: 0.8rem;
+  user-select: none;
 }
 
 /* Responsive Overrides */
